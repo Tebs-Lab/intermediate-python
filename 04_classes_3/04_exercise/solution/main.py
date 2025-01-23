@@ -1,12 +1,12 @@
 import os
-from monsters import Fiend, Bear
-from heroes import BasicHero, Wizard
+from monsters import Fiend
+from heroes import BasicHero
 
 def main():
     os.system('clear')
-    hero = Wizard() 
+    hero = Fiend() 
     while hero.is_alive():
-        current_enemy = Bear(hero.level) 
+        current_enemy = BasicHero(hero.level) 
         while hero.is_alive() and current_enemy.is_alive():
             print('\n  ====BATTLE STATUS====\n')
             print(hero)

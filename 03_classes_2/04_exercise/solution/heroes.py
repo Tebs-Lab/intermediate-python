@@ -6,7 +6,7 @@ class Hero(ABC):
         pass
 
     @abstractmethod
-    def recieve_damage(self, damage_amount):
+    def receive_damage(self, damage_amount):
         pass
     
     @abstractmethod
@@ -33,10 +33,10 @@ class BasicHero(Hero):
 
 
     def attack(self, enemy):
-        enemy.recieve_damage(self.attack_power)
+        enemy.receive_damage(self.attack_power)
 
 
-    def recieve_damage(self, damage_amount):
+    def receive_damage(self, damage_amount):
         damage_amount -= self.resistance
         self.current_hp -= damage_amount
 
@@ -82,12 +82,12 @@ class Wizard(Hero):
     def attack(self, enemy):
         if self.current_mana >= self.spell_cost:
             self.current_mana -= self.spell_cost
-            enemy.recieve_damage(self.spell_power)
+            enemy.receive_damage(self.spell_power)
         else:
-            enemy.recieve_damage(self.attack_power)
+            enemy.receive_damage(self.attack_power)
 
 
-    def recieve_damage(self, damage_amount):
+    def receive_damage(self, damage_amount):
         damage_amount -= self.resistance
         self.current_hp -= damage_amount
 

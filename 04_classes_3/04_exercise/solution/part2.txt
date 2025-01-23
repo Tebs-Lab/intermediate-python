@@ -1,0 +1,4 @@
+# The following commands are all you really need:
+
+python -m pydoc -w heroes.py
+python -m pydoc -w monsters.py

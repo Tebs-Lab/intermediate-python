@@ -12,6 +12,9 @@
 # 2) A description each of the parameters.
 # 3) A description of the return value.
 
+# There is no ultimate standard for docstrings, so what you choose to include 
+# where is going to be a matter of style and preference.
+
 def example_function(a: int, b: float) -> float:
     '''
     This function multiplies two numbers together.
@@ -53,8 +56,6 @@ class Rectangle:
         '''
         Initializes the rectangle with the given height and width.
 
-        Parameters
-        ----------
         height : float
             The height of the rectangle.
         width: float
@@ -67,9 +68,7 @@ class Rectangle:
         '''
         Returns the perimeter of the rectangle.
 
-        Returns
-        -------
-        float
+        Returns float
             The perimeter of the rectangle.
         '''
         return 2 * (self.height + self.width)
@@ -78,9 +77,7 @@ class Rectangle:
         '''
         Returns the area of the rectangle.
 
-        Returns
-        -------
-        float
+        Returns float
             The area of the rectangle.
         '''
         return self.height * self.width
