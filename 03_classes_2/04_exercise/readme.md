@@ -13,7 +13,7 @@ If you successfully implement these interfaces you will be able to play the game
 Write a class that implements the Hero interface. You may use the BasicHero as a guide or starting point. Things to consider:
 
 * The interface defines all the methods that need to exist, but the selection of instance variables is up to you. 
-    * As long as the hero instance has functions `attack`, `recieve_damage`, `defeat_enemy`, `is_alive`, and `__str__` then the code in the game loop will run.
+    * As long as the hero instance has functions `attack`, `receive_damage`, `defeat_enemy`, `is_alive`, and `__str__` then the code in the game loop will run.
     * You could still create bugs and errors in implementing those functions, of course.
     * How you want these functions to behave, and how they modify the internal state of the hero is up to you.
 
@@ -32,7 +32,7 @@ Write a class that implements the Hero interface. You may use the BasicHero as a
 Write a class that implements the Monster interface. You may use the Fiend as a guide or starting point.
 
 * The interface defines all the methods that need to exist, but the selection of instance variables is up to you. 
-    * As long as the monster instance has functions `attack`, `recieve_damage`, `experience_reward`, `is_alive`, and `__str__` then the code in the game loop will run.
+    * As long as the monster instance has functions `attack`, `receive_damage`, `experience_reward`, `is_alive`, and `__str__` then the code in the game loop will run.
     * You could still create bugs and errors in implementing those functions, of course.
     * How you want these functions to behave, and how they modify the internal state of the hero is up to you.
 

@@ -96,7 +96,11 @@ print(ExampleTwo.class_var, ExampleTwo.class_var_two)
 
 # There are LOTS of other tools in the typing module. Consider reading pep-0484 for more details.
 # Here are two last handy examples
-from typing import Iterable, Callable
+from typing import Callable
+# sometimes it's more appropriate to import an abstract base class.
+# typing used to support an Iterable type (deprecated in 3.11), 
+# but the following is now recommended:
+from collections.abc import Iterable 
 
 # Anything that is "iterable" can be used in a for loop.
 def loop_example(items: Iterable) -> None:

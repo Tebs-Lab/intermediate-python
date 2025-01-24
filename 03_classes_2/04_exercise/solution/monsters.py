@@ -12,7 +12,7 @@ class Monster(ABC):
 
 
     @abstractmethod
-    def recieve_damage(self, damage_amount):
+    def receive_damage(self, damage_amount):
         pass
 
 
@@ -42,10 +42,10 @@ class Fiend(Monster):
 
 
     def attack(self, hero):
-        hero.recieve_damage(self.attack_power)
+        hero.receive_damage(self.attack_power)
 
 
-    def recieve_damage(self, damage_amount):
+    def receive_damage(self, damage_amount):
         damage_amount -= self.resistance
         self.current_hp -= damage_amount
 
@@ -74,10 +74,10 @@ class Bear(Monster):
 
 
     def attack(self, hero):
-        hero.recieve_damage(self.attack_power)
+        hero.receive_damage(self.attack_power)
 
 
-    def recieve_damage(self, damage_amount):
+    def receive_damage(self, damage_amount):
         damage_amount -= self.resistance
         self.current_hp -= damage_amount
 
