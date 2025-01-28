@@ -1,26 +1,4 @@
-from abc import ABC, abstractmethod
-
-class Hero(ABC):
-    @abstractmethod
-    def attack(self, enemy):
-        pass
-
-    @abstractmethod
-    def receive_damage(self, damage_amount):
-        pass
-    
-    @abstractmethod
-    def defeat_enemy(self, enemy):
-        pass
-
-    @abstractmethod
-    def is_alive(self):
-        pass
-
-    @abstractmethod
-    def __str__(self):
-        pass
-
+from interfaces import Monster, Hero
 
 class BasicHero(Hero):
     def __init__(self):

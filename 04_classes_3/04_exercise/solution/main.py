@@ -4,9 +4,9 @@ from heroes import BasicHero
 
 def main():
     os.system('clear')
-    hero = Fiend() 
+    hero = BasicHero() 
     while hero.is_alive():
-        current_enemy = BasicHero(hero.level) 
+        current_enemy = Fiend(hero.level) 
         while hero.is_alive() and current_enemy.is_alive():
             print('\n  ====BATTLE STATUS====\n')
             print(hero)
