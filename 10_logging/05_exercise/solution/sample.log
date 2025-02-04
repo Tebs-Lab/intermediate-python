@@ -1,0 +1,8 @@
+2025-02-04 13:44:42,262 - functions - DEBUG - log_helper - 9 - <function count_characters at 0x1024e0310> called with args: ('Hello, World!',) and kwargs: {}
+2025-02-04 13:44:42,263 - functions - DEBUG - log_helper - 11 - <function count_characters at 0x1024e0310> returned {'H': 0, 'e': 0, 'l': 2, 'o': 1, ',': 0, ' ': 0, 'W': 0, 'r': 0, 'd': 0, '!': 0}
+2025-02-04 13:44:42,263 - functions - DEBUG - log_helper - 9 - <function count_characters at 0x1024e0310> called with args: ('Look at me go, ma!',) and kwargs: {}
+2025-02-04 13:44:42,263 - functions - DEBUG - log_helper - 11 - <function count_characters at 0x1024e0310> returned {'L': 0, 'o': 2, 'k': 0, ' ': 3, 'a': 1, 't': 0, 'm': 1, 'e': 0, 'g': 0, ',': 0, '!': 0}
+2025-02-04 13:44:42,263 - functions - DEBUG - log_helper - 9 - <function most_and_least_common at 0x1024e3be0> called with args: ([1, 1, 2, 2],) and kwargs: {}
+2025-02-04 13:44:42,264 - functions - DEBUG - log_helper - 11 - <function most_and_least_common at 0x1024e3be0> returned (2, 2)
+2025-02-04 13:44:42,264 - functions - DEBUG - log_helper - 9 - <function most_and_least_common at 0x1024e3be0> called with args: ([2, 2, 1, 1, 5, 6, 1, 4, 3, 9, 7, 5, 'g'],) and kwargs: {}
+2025-02-04 13:44:42,264 - functions - DEBUG - log_helper - 11 - <function most_and_least_common at 0x1024e3be0> returned (1, 'g')
