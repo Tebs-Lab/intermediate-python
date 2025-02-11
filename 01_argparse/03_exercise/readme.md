@@ -35,6 +35,31 @@ This script is deterministic and completely unconfigurable. Your goal is to take
 
 ## Documentation and Other Helpful Resources
 
+## Common Bugs and Remediation
+
+Many employers hijack SSL requests, at several companies we've encountered some SSL errors as a result. If you try to run the sample code and get an error message related to SSL, here are two workaround to try:
+
+1. Adding `verify=False` to the `requests.get` function calls
+    * [https://stackoverflow.com/questions/15445981/how-do-i-disable-the-security-certificate-check-in-python-requests](https://stackoverflow.com/questions/15445981/how-do-i-disable-the-security-certificate-check-in-python-requests)
+2. Create an "unverified context" using ssl. Add the following code to the top of your script:
+
+```python
+import ssl
+
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    # Legacy Python that doesn't verify HTTPS certificates by default
+    pass
+else:
+    # Handle target environment that doesn't support HTTPS verification
+    ssl._create_default_https_context = _create_unverified_https_context
+```
+
+Note that you may have to apply both of these workarounds at once. 
+
+> BE ADVISED: these are both workarounds that circumvent security protections. If your employer is doing this to your machine, they (hopefully) can provide an official workaround that doesn't rely on not verifying SSL certificates. 
+
 ### Python Resources
 
 * [Argparse Documentation](https://docs.python.org/3/library/argparse.html)
