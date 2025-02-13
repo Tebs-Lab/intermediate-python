@@ -14,13 +14,13 @@ Make a 4 function calculator interface. Your program should:
 * Create a class called Calculator, which must:
     * Have a way to store the current value of the computation.
     * Have separate methods for performing addition, subtraction, multiplication, and division
-    * Have a display fuction which uses the terminal to:
+    * Have a display function which uses the terminal to:
         * Display the current value of the computation.
         * Accepts input from the user.
         * Displays any relevant error messages.
         * Allows the user to exit the display, but loops until then.
     * Take inputs like an old-school calculator: one at a time.
-        * Enter a number while no operation is pendning: that becomes the value.
+        * Enter a number while no operation is pending: that becomes the value.
         * Enter an operation: that becomes the pending operation
         * Enter a number while an operation is pending: perform the operation with the new number and the currently displayed value. 
         * Have a method that clears the current value and pending operation.
