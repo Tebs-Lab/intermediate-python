@@ -81,12 +81,12 @@ def main():
     # We won't "reregister" a member
     lab_report.register_signup(buzz)
 
-    # Explicitly envoking the "__eq__" method.
+    # Explicitly invoking the "__eq__" method.
     buzz_alt = NewsletterSubscriber("Edwin Eugene Aldrin Jr.", "moonboy1969@fakemail.com")
     print(buzz == buzz_alt) # True even though they are different objects with a different name
     print(buzz is buzz_alt) # False, compares memory location of the objects.
 
-    # under the hood, __eq__ being envoked by the 'is in' in register account
+    # under the hood, __eq__ being invoked by the 'is in' in register account
     lab_report.register_signup(buzz_alt)
 
     lab_report.publish('Welcome to the Lab Report!')
