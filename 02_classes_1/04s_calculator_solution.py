@@ -16,6 +16,7 @@ class Calculator:
         self.pending_operator = None
         while True:
             os.system('clear') # Clears the text output so we always have just the most recent line
+            # os.system('cls') # For Windows Users!!
             if self.additional_display: print(self.additional_display)
             print(f'{self.current_val} {self.pending_operator or ""}')
             user_in = input(": ")
@@ -37,7 +38,7 @@ class Calculator:
             else:
                 try:
                     user_in = float(user_in)
-                except:
+                except Exception as e:
                     self.additional_display = f"\x1b[31mError, invalid input {user_in}. Enter a number of one of +, -, /, *, c, e\x1b[0m"
                     continue
             

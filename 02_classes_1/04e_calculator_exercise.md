@@ -41,5 +41,6 @@ Make a 4 function calculator interface. Your program should:
 ```
 import os
 
-os.system('clear')
+os.system('clear') # *nix
+os.system('cls') # windowsa
 ```
