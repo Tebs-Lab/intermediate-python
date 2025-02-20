@@ -5,8 +5,7 @@ In this exercise you'll practice using docstrings, type annotations, and your ch
 
 ## Part 0: An important note
 
-In order to avoid a circular import, which causes errors, but still allow proper type hinting, we have moved the two interfaces `Hero` and `Monster` to a new python file called `interfaces.py`. This way both `heroes.py` and `monsters.py` can reference the 
-abstract classes in their type hints without creating a circular dependency that cannot be resolved.
+In order to avoid a circular import, which causes errors, but still allow proper type hinting, we have moved the two interfaces `Hero` and `Monster` to a new python file called `interfaces.py`. This way both `heroes.py` and `monsters.py` can reference the abstract classes in their type hints without creating a circular dependency that cannot be resolved.
 
 ## Part 1: Adding types and docs
 
