@@ -12,7 +12,7 @@ Create a decorator that tracks and prints the amount of time a function took to 
 * Measure the time when it finishes.
 * Compute the difference and print it. 
 
-# Part 2: Caching
+## Part 2: Caching
 
 Create a decorator that adds a size limited cache to any function, such that:
 
