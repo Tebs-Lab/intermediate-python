@@ -14,6 +14,11 @@ from heroes import BasicHero
 from monsters import Fiend
 import pytest
 
+# Mocking is a way to replace a function or class with a dummy version
+# that doesn't actually invoke the underlying code, but does keep information
+# and statistics about how the mocked function or object was used.
+import unittest.mock as mock
+
 def test_gain_experience():
     hero = BasicHero()
     fiend = Fiend(1)
@@ -25,6 +30,10 @@ def test_level_up_trigger():
     hero = BasicHero()
     fiend = Fiend(1)
 
+    # Mocking some functions allows us just to test that they are called
+    # without worrying about their actual behavior.
+    hero.level_up = mock.Mock()
+
     # Candidly, this line of code demonstrates a problem with the current
     # implementation of hero. The level up condition just if the experience
     # is greater than the level * 20, but that's not codified in any instance variable
@@ -35,14 +44,21 @@ def test_level_up_trigger():
     before = hero.level
     hero.defeat_enemy(fiend)
     
-    assert hero.level == before + 1
+    # This will test whether or not the level_up method was called.
+    assert hero.level_up.called
 
     # NOTE: A unit test that ensures the logic of level_up is correct would be a good idea.
     # But it's NOT an integration test, so it doesn't belong in this test case
 
 # Mini-exercise: Write an integration test that ensures that the hero's
 # HP is reduced by the correct amount when they are attacked by a monster.
-
+def test_reduce_hero_hp():
+    hero = BasicHero()
+    fiend = Fiend(1)
+    before_hp = hero.current_hp
+    fiend.attack(hero)
+    damage = fiend.attack_power - hero.resistance
+    assert hero.current_hp == before_hp - damage
 
 
 if __name__ == '__main__':
