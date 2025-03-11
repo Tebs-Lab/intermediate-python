@@ -71,7 +71,7 @@ def compute_votes_from_post_url(url):
     # The comments listing is always the second item in the post.
     comments = comments_json[1]['data']['children']
     for comment in comments:
-        # if comment['kind'] != 't1': continue # t1 is the comment type, sometimes other types appear like "more"
+        if comment['kind'] != 't1': continue # t1 is the comment type, sometimes other types appear like "more"
         text = comment['data']['body']
         
         for vote_type in votes.keys():
